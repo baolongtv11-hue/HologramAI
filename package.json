@@ -1,0 +1,22 @@
+{
+  "name": "hologram-ai-modern",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"npm:api\" \"vite --host 0.0.0.0\"",
+    "api": "node --env-file=.env server.js --api-only",
+    "build": "vite build",
+    "start": "node --env-file=.env server.js"
+  },
+  "dependencies": {
+    "@google/genai": "2.31.0"
+  },
+  "devDependencies": {
+    "concurrently": "9.2.1",
+    "vite": "7.1.12"
+  }
+}
